@@ -16,7 +16,24 @@ Spring Initializr: https://start.spring.io
 ## Client App
 - Postman
 
-# Project Images
+## Project Info DB
+- Create a database named: db_aws
+- Confirgure your application.properties for connection.
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/db_aws?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+spring.datasource.username=root
+spring.datasource.password=root
+
+#Hibernate
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+
+#Hibernate auto dll
+spring.jpa.hibernate.ddl-auto=update
+
+#logging.level.org.hibernate.SQL=debug
+
+```
 
 
 ->>under development
