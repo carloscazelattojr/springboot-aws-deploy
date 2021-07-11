@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.ResourceAccessException;
 
 import br.com.carlosjunior.springcrudaws.springcrudaws.entities.User;
+import br.com.carlosjunior.springcrudaws.springcrudaws.exceptions.ResourceNotFoundException;
 import br.com.carlosjunior.springcrudaws.springcrudaws.repositories.UserRepository;
 
 @RestController
@@ -37,7 +38,7 @@ public class UserController {
 	@GetMapping("/{id}")
 	public User getUserById(@PathVariable(value = "id") Long userId) {
 		return this.userRepository.findById(userId)
-				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
+				.orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 	}
 
 	// create user
@@ -50,7 +51,7 @@ public class UserController {
 	@PutMapping("/{id}")
 	public User updateUser(@RequestBody User user, @PathVariable(value = "id") Long userId) {
 		User userExists = this.userRepository.findById(userId)
-				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
+				.orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 
 		userExists.setFirstName(user.getFirstName());
 		userExists.setLastName(user.getLastName());
@@ -63,7 +64,7 @@ public class UserController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<User> deleteUser(@PathVariable(value = "id") Long userId) {
 		User userExists = this.userRepository.findById(userId)
-				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
+				.orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 		this.userRepository.delete(userExists);
 		return ResponseEntity.ok().build();
 
