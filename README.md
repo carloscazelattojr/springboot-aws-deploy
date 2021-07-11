@@ -2,7 +2,7 @@
 
 Studies on how to create a web application and deployment on AWS (Simple example)
 
-
+<br>
 # Project Initializr:
 
 Spring Initializr: https://start.spring.io
@@ -40,7 +40,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 ```
 
-
+<br>
 ## APIS
 
 
@@ -75,7 +75,7 @@ DELETE: Delete User by Id
 /api/users/{id}
 
 
-
+<br>
 ## CONF: AWS (RDS) 
 
 - Link Br: https://aws.amazon.com/pt/rds/
@@ -147,7 +147,7 @@ Then configure your MySQLWorkbench and create db_aws database.
 Then reconfigure application.properties (Springboot) to connect to AWS RDS
 
 
-
+<br>
 
 ## Build Deploy
 
@@ -208,5 +208,5 @@ Now just use/test.
 
 
 
-
+<br><br>
 Credits: Javaguide!
