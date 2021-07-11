@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,7 +35,7 @@ public class UserController {
 
 	// get user by id
 	@GetMapping("/{id}")
-	public User getUserById(@PathParam(value = "id") Long userId) {
+	public User getUserById(@PathVariable(value = "id") Long userId) {
 		return this.userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
 	}
@@ -47,7 +48,7 @@ public class UserController {
 
 	// update user
 	@PutMapping("/{id}")
-	public User updateUser(@RequestBody User user, @PathParam(value = "id") Long userId) {
+	public User updateUser(@RequestBody User user, @PathVariable(value = "id") Long userId) {
 		User userExists = this.userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
 
@@ -60,7 +61,7 @@ public class UserController {
 
 	// delete user by id
 	@DeleteMapping("/{id}")
-	public ResponseEntity<User> deleteUserById(@PathParam(value = "id") Long userId) {
+	public ResponseEntity<User> deleteUserById(@PathVariable(value = "id") Long userId) {
 		User userExists = this.userRepository.findById(userId)
 				.orElseThrow(() -> new ResourceAccessException("User not found with id: " + userId));
 		this.userRepository.delete(userExists);
