@@ -13,6 +13,7 @@ Spring Initializr: https://start.spring.io
 - Spring Data JPA
 - MySql Driver 
 
+
 - AWS RDS
 - AWS Elastic Beanstalk
 
@@ -79,42 +80,71 @@ DELETE: Delete User by Id
 - Link Br: https://aws.amazon.com/pt/rds/
 
 PT-Br:
+
 Acesse sua conta AWS Console.
+
 Dentro do AWS Console, selecione na sessão Databases, a opção RDS. 
+
 Depois clique em Criar database.
+
 Depois clique em Create Standard.
-Depois na sessão banco de dados, escolha MySql
-Depois na sessão modelo, escolha a opção Nivel Gratuito/Free
+
+Depois na sessão banco de dados, escolha MySql.
+
+Depois na sessão modelo, escolha a opção Nivel Gratuito/Free.
+
 Depois na sessão Configuração, preencha os campos correspondentes para criação de sua conexão.(Usuario e senha).
+
 Depois nas sessões Instância, armazenamento e durabilidade deixar como padrão.
+
 Depois na sessão Conectividade, na opção Acesso Público escolher SIM.
+
 Os demais deixar como padrão e clique em criar banco de dados.
 
 Depois aguardar até criar o banco de dados no AWS.
-Depois coletar os dados de acesso e atualizar o application.properties para trocar a conexão de Local para AWS
+
+Depois coletar os dados de acesso e atualizar o application.properties para trocar a conexão de Local para AWS.
+
 Depois configurar Inbound Roles para configurar seu IP. 
 
 Depois configurar seu MySQLWorkbench e criar do banco de dados db_aws.
-Depois reconfigurar o application.properties (Springboot) para conectar no AWS RDS
+
+Depois reconfigurar o application.properties (Springboot) para conectar no AWS RDS.
+
+
 
 EN: 
+
 Sign in to your AWS Console account.
+
 Within the AWS Console, select in the Databases session, the RDS option.
+
 Then click on Create database.
+
 Then click on Create Standard.
-Then in the database session, choose MySql
-Afterwards in the model session, choose the option Level Free/Free
+
+Then in the database session, choose MySql.
+
+Afterwards in the model session, choose the option Level Free/Free.
+
 Then in the Configuration section, fill in the corresponding fields to create your connection. (Username and password).
+
 Then in the Instance, Storage and Durability sessions leave as default.
+
 Then in the Connectivity section, in the Public Access option choose YES.
+
 The others leave as default and click on create database.
 
 Then wait until creating the database in AWS.
-Then collect the access data and update the application.properties to switch the Local to AWS connection
+
+Then collect the access data and update the application.properties to switch the Local to AWS connection.
+
 Then configure Inbound Roles to configure your IP.
 
 Then configure your MySQLWorkbench and create db_aws database.
+
 Then reconfigure application.properties (Springboot) to connect to AWS RDS
+
 
 
 
