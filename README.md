@@ -159,7 +159,7 @@ mvn clean install
 
 Será criado um .JAR na pasta target. Este arquivo você irá colocar no AWS Elastic Beanstalk.
 
-
+<br>
 ## CONF: AWS Elastic Benastalk
 
 PT-BR:
