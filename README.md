@@ -13,6 +13,7 @@ Spring Initializr: https://start.spring.io
 - Spring Data JPA
 - MySql Driver 
 
+<br>
 
 - AWS RDS
 - AWS Elastic Beanstalk
@@ -111,7 +112,7 @@ Depois configurar seu MySQLWorkbench e criar do banco de dados db_aws.
 
 Depois reconfigurar o application.properties (Springboot) para conectar no AWS RDS.
 
-
+<br>
 
 EN: 
 
@@ -181,7 +182,7 @@ Ao término, será apresentado um Host com seu App na AWS.
 
 Agora é só utilizar/testar.
 
-
+<br>
 
 En:
 
