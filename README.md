@@ -162,13 +162,20 @@ Será criado um .JAR na pasta target. Este arquivo você irá colocar no AWS Ela
 ## CONF: AWS Elastic Benastalk
 
 PT-BR:
+
 Acesse sua conta AWS, em serviços escolha a opção Elastic Benastalk.
+
 Crie um novo app.
-Escolha plataforma JAVA
+
+Escolha plataforma JAVA.
+
 Escolha a opção: Fazer upload do Código.  Selecione o seu arquivo .JAR que acabou de criar.
+
 Clique no botão: Configurar mais opções. Será aberto mais sessões de configuração.
+
 Na sessão Banco de dados, clique em editar. Adicione as configurações do banco de dados AWS RDS criado anteriormente e salve as informações.
-Depois clique em Criar App. (Aguarde a criação do app.)
+
+Depois clique em Criar App. (Aguarde a criação do app.).
 
 Ao término, será apresentado um Host com seu App na AWS. 
 
@@ -177,12 +184,19 @@ Agora é só utilizar/testar.
 
 
 En:
+
 Access your AWS account, under services choose the Elastic Benastalk option.
+
 Create a new app.
+
 Choose JAVA platform
+
 Choose the option: Upload Code. Select your .JAR file you just created.
+
 Click the button: Configure more options. More setup sessions will open.
+
 In the Database session, click edit. Add the settings from the AWS RDS database created earlier and save the information.
+
 Then click Create App. (Wait for the app to be created.)
 
 Upon completion, you will be presented with a Host with your App on AWS.
